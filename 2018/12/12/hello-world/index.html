@@ -1,10 +1,534 @@
-<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Hello World | DarkCloud</title><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><script src="/js/third-party/jquery.min.js">           </script><script src="/js/third-party/velocity.min.js">           </script><script src="/js/third-party/velocity.ui.min.js">           </script><link rel="icon" href="/img/favicon.ico"></head><body><nav id="nav-bar"><nav class="clear-fix" id="nav-container"><div class="pull-left" id="page-home"><a href="/">DarkCloud</a></div><i class="fa fa-bars pull-right" id="toggle-nav" aria-hidden="true"></i><ul class="pull-right" id="navs"><li><a class="nav" href="/">Home</a></li><li><a class="nav" href="/about">About</a></li><li><a class="nav" href="/tags">Tags</a></li></ul></nav></nav><header id="header-info"><div id="header-container"><div id="site-info"><div id="terminal-pl"><div id="top-bar"><ul id="control"><li class="btn"></li><li class="btn"></li><li class="btn"></li></ul><div id="file-path"><i class="fa fa-folder folder-ic" aria-hidden="true"></i> Kim Tholstorf 10 X 10</div></div><div id="code-pl">Last updated: 2018-12-12<br>Kim Tholstorf:~ Desktop$ <span class="code-pl-input">node Hello World.js</span><br><br>> Post.tags <br><br><br></div></div></div></div></header><div id="content-outer"><div id="content-inner"><article id="post"><a class="article-title">Hello World</a><time class="article-date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-12-12</time><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-</article><nav id="pagination"><div class="pagination clear-fix"></div></nav></div></div><footer><div id="footer-inner"><div class="social-icons"><a class="social-icon" href="https://github.com/KimTholstorf" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon" href="https://twitter.com/KimTholstorf" target="_blank"><i class="fa fa-twitter"></i></a><a class="social-icon" href="https://facebook.com/KimTholstorf" target="_blank"><i class="fa fa-facebook"></i></a><a class="social-icon" href="https://www.linkedin.com/in/kimtholstorf/" target="_blank"><i class="fa fa-linkedin"></i></a><a class="social-icon" href="mailto:kim@tholstorf.dk" target="_blank"><i class="fa fa-mail"></i></a></div><p class="design-info">power by <a href="https://hexo.io" target="_blank">Hexo</a> | theme <a href="https://github.com/lazysheep666/terminal_theme" target="_blank">Teminal</a></p><p class="copyright">Copyright © Kim Tholstorf Blog 2018</p></div></footer><script src="/js/nav.js"></script><script src="/js/scroll.js"></script><script src="/js/index.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="DarkCloud">
+    <title>Hello World - DarkCloud</title>
+    <meta name="author" content="Kim Tholstorf">
+    
+    
+        <link rel="icon" href="darkcloud.dk/assets/images/avatar_circle.png">
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto"],"image":"avatar_circle.png"},"articleBody":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.\nInstead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo.Setting up gitgub pages was a breeze and the same for setting up an apex domain to point at my Github Page, i.e. just a github repository. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)For comments i use Gitments because it uses Github and it is free, compared to Disqus who does have a free version, but then you’ll get spam instead.The theme is based on Louis Barranqueiro’s very excellent tranquilpeak theme. Seriously, look at his documentation. I wish everyone was as thorough.\nInstall and configure Hexo\n12345678910$ npm install hexo-cli -g$ npm install hexo-generator-github --save$ hexo init myblog.github.io$ cd myblog.github.io$ npm install$ git pull git@github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git themes/tranquilpeak$ vi _config.yml  #edit _config.yml for settings$ vi themes/tranquilpeak/_config.yml  #edit _config.yml for theme steeings$ vi themes/tranquilpeak/languages/en.yml #edir author bio, etc.$ hexo server #opens a local server on http://localhost4000 to see if hexo works\nWrite posts12345$ hexo new \"Hello World\"$ vi source/_posts/hello-world.md #write post content$ hexo generate #generate and render static files$ hexo server #opens a local server on http://localhost4000 to view changes$ hexo deploy #push files to remote server\nMore info on writing, generating and deployment with Hexo.\n\n","dateCreated":"2018-12-12T14:02:54+01:00","dateModified":"2018-12-18T02:26:09+01:00","datePublished":"2018-12-12T14:02:54+01:00","description":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.\nInstead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo.","headline":"Hello World","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"/darkcloud.dk/2018/12/12/hello-world/"},"publisher":{"@type":"Organization","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto"],"image":"avatar_circle.png","logo":{"@type":"ImageObject","url":"avatar_circle.png"}},"url":"/darkcloud.dk/2018/12/12/hello-world/"}</script>
+    <meta name="description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="darkcloud.dk/2018/12/12/hello-world/index.html">
+<meta property="og:site_name" content="DarkCloud">
+<meta property="og:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="/img/favicon.png">
+<meta property="og:image" content="https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg">
+<meta property="og:updated_time" content="2018-12-18T01:26:09.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
+<meta name="twitter:image" content="/img/favicon.png">
+<meta name="twitter:creator" content="@KimTholstorf">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="darkcloud.dk/assets/images/avatar_circle.png"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-c4ozcsklz4kht2pebhp44xorvyverh23toayhn7i6ubrpyedak24hv1v0hyd.min.css">
+    <!--STYLES END-->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131086114-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-131086114-1');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="3">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">DarkCloud</a>
+    </div>
+    
+        
+            <a class="header-right-picture " href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="3">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+                </a>
+                <h4 class="sidebar-profile-name">Kim Tholstorf</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>passionate about most cloud native technologies, my family, friends and great books</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/ " title="Home">
+                    
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-categories" title="Categories">
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-tags" title="Tags">
+                    
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
+                    
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="#about" title="About">
+                    
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://github.com/KimTholstorf" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://twitter.com/KimTholstorf" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://facebook.com/kimtholstorf" target="_blank" rel="noopener" title="Facebook">
+                    
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="https://www.linkedin.com/in/kimtholstorf" target="_blank" rel="noopener" title="LinkedIn">
+                    
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a class="sidebar-button-link " href="/mailto" title="Mail">
+                    
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Hello World
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2018-12-12T14:02:54+01:00">
+	
+		    Dec 12, 2018
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.<br>Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.</p>
+<p>Instead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo.io</a> which is very much like <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyllrb</a> and <a href="https://https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, though something just felt more right for me with <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.<br><a id="more"></a><br>Setting up gitgub pages was a breeze and the same for setting up an <a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="noopener">apex domain</a> to point at my Github Page, i.e. just a <a href="https://github.com/KimTholstorf/darkcloud.github.io" target="_blank" rel="noopener">github repository</a>. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)<br>For comments i use Gitments because it uses Github and it is free, compared to Disqus who does have a free version, but then you’ll get spam instead.<br>The theme is based on Louis Barranqueiro’s very excellent <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="noopener">tranquilpeak theme</a>. <em>Seriously, look at his <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/DOCUMENTATION.md" target="_blank" rel="noopener">documentation</a></em>. I wish everyone was as thorough.</p>
+<p><strong>Install and configure Hexo</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo-generator-github --save</span><br><span class="line">$ hexo init myblog.github.io</span><br><span class="line">$ <span class="built_in">cd</span> myblog.github.io</span><br><span class="line">$ npm install</span><br><span class="line">$ git pull git@github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git themes/tranquilpeak</span><br><span class="line">$ vi _config.yml  <span class="comment">#edit _config.yml for settings</span></span><br><span class="line">$ vi themes/tranquilpeak/_config.yml  <span class="comment">#edit _config.yml for theme steeings</span></span><br><span class="line">$ vi themes/tranquilpeak/languages/en.yml <span class="comment">#edir author bio, etc.</span></span><br><span class="line">$ hexo server <span class="comment">#opens a local server on http://localhost4000 to see if hexo works</span></span><br></pre></td></tr></table></figure>
+<p><strong>Write posts</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span></span><br><span class="line">$ vi <span class="built_in">source</span>/_posts/hello-world.md <span class="comment">#write post content</span></span><br><span class="line">$ hexo generate <span class="comment">#generate and render static files</span></span><br><span class="line">$ hexo server <span class="comment">#opens a local server on http://localhost4000 to view changes</span></span><br><span class="line">$ hexo deploy <span class="comment">#push files to remote server</span></span><br></pre></td></tr></table></figure></p>
+<p>More info on <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">writing</a>, <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">generating</a> and <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">deployment</a> with Hexo.</p>
+<p><a href="/img/head.jpg"><img src="/img/favicon.png" alt="Sample Image Added via Markdown"></a><br><a href="https://www.youtube.com/watch?v=StTqXEQ2l-Y" title="Everything Is AWESOME" target="_blank" rel="noopener"><img src="https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg" alt="Everything Is AWESOME"></a></p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/12/hello-world/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/12/hello-world/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/12/hello-world/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#gitment">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="gitment"></div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 Kim Tholstorf. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/12/hello-world/" title="Share on Facebook">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/12/hello-world/" title="Share on Twitter">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/12/hello-world/" title="Share on Google+">
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#gitment">
+                         <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/12/hello-world/">
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/12/hello-world/">
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/12/hello-world/">
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+        
+            <h4 id="about-card-name">Kim Tholstorf</h4>
+        
+            <div id="about-card-bio"><p>passionate about most cloud native technologies, my family, friends and great books</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br>
+                <p>Senior Systems Engineer @ <a href="https://vmware.com">VMware</a></p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br>
+                Denmark, Copenhagen
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-dbd16rvloemmuxdzniplmnxxvwoz24eya9wol0b7vvmlokgqsjivmb8dnscy.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script type="text/javascript">
+            (function() {
+                function render() {
+                    new Gitment({
+                        id: 'darkcloud.dk/2018/12/12/hello-world/',
+                        owner: 'KimTholstorf',
+                        repo: 'darkcloud.github.io',
+                        oauth: {
+                            client_id: '0bf95885ba90e31ce0e1',
+                            client_secret: '94ad000c141d00f9ea04c6d4bcace05e11563cbf',
+                        }
+                    }).render('gitment');
+                }
+                var gc = document.createElement('script');
+                gc.type = 'text/javascript';
+                gc.src = '//imsun.github.io/gitment/dist/gitment.browser.js';
+                gc.charset = 'UTF-8';
+                gc.onload = render;
+                gc.async = true;
+                document.querySelector('body').appendChild(gc);
+                var gcs = document.createElement('link');
+                gcs.href = '//imsun.github.io/gitment/style/default.css';
+                gcs.type = 'text/css';
+                gcs.rel = 'stylesheet';
+                gcs.media = 'screen,print';
+                document.querySelector('head').appendChild(gcs);
+            })();
+	    </script>
+    
+
+
+
+    </body>
+</html>
