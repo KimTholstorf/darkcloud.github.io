@@ -13,23 +13,23 @@
         <link rel="icon" href="darkcloud.dk/assets/images/avatar_circle.png">
     
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto:kim@tholstorf.dk"],"image":"avatar_circle.png"},"articleBody":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.\nInstead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo.Setting up github pages was a breeze and the same for setting up an apex domain to point at my Github Page, i.e. just a github repository. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)For comments i use Disqus because integration was easy and because I could not get Gitment to work. The theme is based on Louis Barranqueiro’s very excellent tranquilpeak theme. Seriously, look at his documentation. I wish everyone was as thorough.\nInstall and configure Hexo\n12345678910$ npm install hexo-cli -g$ npm install hexo-generator-github --save$ hexo init myblog.github.io$ cd myblog.github.io$ npm install$ git pull git@github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git themes/tranquilpeak$ vi _config.yml  #edit _config.yml for settings$ vi themes/tranquilpeak/_config.yml  #edit _config.yml for theme steeings$ vi themes/tranquilpeak/languages/en.yml #edit author bio, etc.$ hexo server #opens a local server on http://localhost4000 to see if hexo works\nWrite posts1234$ hexo new \"Hello World\"$ vi source/_posts/hello-world.md #write post content$ hexo generate #generate and render static files$ hexo server #opens a local server on http://localhost4000 to view changes\nPublish changes1$ hexo deploy #configured in _config.yml to push files to github pages\nMore info on writing, generating and deployment with Hexo.\nNote to self:My plan is to keep the post syntax as close to Markdown as possible, though Hexo and the tranquilpeak theme does support some pretty cool custom tags for everything from fancybox galaries to alerts and highlighting.\n[![Sample Image Added via Markdown](avatar.png)](head.jpg)\n[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y \"Everything Is AWESOME\")\n\nthough the plugin tags are quite elegant  \n","dateCreated":"2018-12-18T11:53:19+01:00","dateModified":"2018-12-20T13:49:01+01:00","datePublished":"2018-12-18T11:53:19+01:00","description":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.\nInstead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo.","headline":"Hello World","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"/darkcloud.dk/2018/12/18/Hello-World/"},"publisher":{"@type":"Organization","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto:kim@tholstorf.dk"],"image":"avatar_circle.png","logo":{"@type":"ImageObject","url":"avatar_circle.png"}},"url":"/darkcloud.dk/2018/12/18/Hello-World/","keywords":"hexo"}</script>
-    <meta name="description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto:kim@tholstorf.dk"],"image":"avatar_circle.png"},"articleBody":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about containers and Kubernetes - plus fun projects activities out and about.\nInstead of using one of the more boring blog engines out on the internet (looking at you Medium, Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I ended up with Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo - though I could end up use Hugo if they catch up with Hexo features. I really like their approach, but Hexo had more features that resonated with me.\n\nSetting up github pages was a breeze and the same for setting up an apex domain to point at my Github Page, i.e. just a github repository. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)For comments i use Disqus because integration was easy and because I could not get Gitment to work. The theme is based on Louis Barranqueiro’s very excellent tranquilpeak theme. Seriously, look at his documentation. I wish everyone was as thorough.\nInstall and configure Hexo\n12345678910$ npm install hexo-cli -g$ npm install hexo-generator-github --save$ hexo init myblog.github.io$ cd myblog.github.io$ npm install$ git pull git@github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git themes/tranquilpeak$ vi _config.yml  #edit _config.yml for settings$ vi themes/tranquilpeak/_config.yml  #edit _config.yml for theme steeings$ vi themes/tranquilpeak/languages/en.yml #edit author bio, etc.$ hexo server #opens a local server on http://localhost4000 to see if hexo works\n\nWrite posts\n1234$ hexo new \"Hello World\"$ vi source/_posts/hello-world.md #write post content$ hexo generate #generate and render static files$ hexo server #opens a local server on http://localhost4000 to view changes\n\nPublish changes\n1$ hexo deploy #configured in _config.yml to push files to github pages\n\nMore info on writing, generating and deployment with Hexo.\nNote to self:My plan is to keep the post syntax as close to Markdown as possible, though Hexo and the tranquilpeak theme does support some pretty cool custom tags for everything from fancybox galaries to alerts and highlighting.\n[![Sample Image Added via Markdown](avatar.png)](head.jpg)\n[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y \"Everything Is AWESOME\")\nthough the plugin tags are quite elegant\n  \n\n","dateCreated":"2019-12-21T11:53:19+01:00","dateModified":"2020-01-17T10:41:13+01:00","datePublished":"2019-12-21T11:53:19+01:00","description":"This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about containers and Kubernetes - plus fun projects activities out and about.\nInstead of using one of the more boring blog engines out on the internet (looking at you Medium, Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I ended up with Hexo.io which is very much like Jekyllrb and Hugo, though something just felt more right for me with Hexo - though I could end up use Hugo if they catch up with Hexo features. I really like their approach, but Hexo had more features that resonated with me.","headline":"Hello World","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"/darkcloud.dk/2019/12/21/Hello-World/"},"publisher":{"@type":"Organization","name":"Kim Tholstorf","sameAs":["https://github.com/KimTholstorf","https://twitter.com/KimTholstorf","https://facebook.com/kimtholstorf","https://www.linkedin.com/in/kimtholstorf","mailto:kim@tholstorf.dk"],"image":"avatar_circle.png","logo":{"@type":"ImageObject","url":"avatar_circle.png"}},"url":"/darkcloud.dk/2019/12/21/Hello-World/","keywords":"hexo"}</script>
+    <meta name="description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about containers and">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="darkcloud.dk/2018/12/18/Hello-World/index.html">
+<meta property="og:url" content="darkcloud.dk/2019/12/21/Hello-World/index.html">
 <meta property="og:site_name" content="DarkCloud">
-<meta property="og:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
+<meta property="og:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about containers and">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="darkcloud.dk/2018/12/18/Hello-World/avatar.png">
-<meta property="og:image" content="darkcloud.dk/2018/12/18/Hello-World/avatar_w.png">
-<meta property="og:image" content="darkcloud.dk/2018/12/18/Hello-World/avatar_g.png">
-<meta property="og:updated_time" content="2018-12-20T12:49:01.830Z">
+<meta property="og:image" content="darkcloud.dk/2019/12/21/Hello-World/avatar.png">
+<meta property="og:image" content="darkcloud.dk/2019/12/21/Hello-World/avatar_w.png">
+<meta property="og:image" content="darkcloud.dk/2019/12/21/Hello-World/avatar_g.png">
+<meta property="og:updated_time" content="2020-01-17T09:41:13.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about my shift to foc">
-<meta name="twitter:image" content="darkcloud.dk/2018/12/18/Hello-World/avatar.png">
+<meta name="twitter:description" content="This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.Some will be about workrelated stuff but more likely it will be about containers and">
+<meta name="twitter:image" content="darkcloud.dk/2019/12/21/Hello-World/avatar.png">
 <meta name="twitter:creator" content="@KimTholstorf">
     
     
@@ -76,10 +76,11 @@
     </div>
     
         
-            <a class="header-right-picture " href="#about">
+            <a  class="header-right-picture "
+                href="#about">
         
         
-            <img class="header-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+            <img class="header-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture"/>
         
         </a>
     
@@ -97,7 +98,7 @@
         
             <div class="sidebar-profile">
                 <a href="/#about">
-                    <img class="sidebar-profile-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+                    <img class="sidebar-profile-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture"/>
                 </a>
                 <h4 class="sidebar-profile-name">Kim Tholstorf</h4>
                 
@@ -111,7 +112,11 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/ " title="Home">
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="Home"
+                        >
                     
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Home</span>
@@ -120,7 +125,11 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/all-tags" title="Tags">
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="Tags"
+                        >
                     
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Tags</span>
@@ -129,7 +138,11 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="Archives"
+                        >
                     
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Archives</span>
@@ -138,7 +151,11 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="#about" title="About">
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                            title="About"
+                        >
                     
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">About</span>
@@ -151,7 +168,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://github.com/KimTholstorf" target="_blank" rel="noopener" title="GitHub">
+                        <a  class="sidebar-button-link " href="https://github.com/KimTholstorf" target="_blank" rel="noopener" title="GitHub">
                     
                         <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">GitHub</span>
@@ -160,7 +177,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://twitter.com/KimTholstorf" target="_blank" rel="noopener" title="Twitter">
+                        <a  class="sidebar-button-link " href="https://twitter.com/KimTholstorf" target="_blank" rel="noopener" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -169,7 +186,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://facebook.com/kimtholstorf" target="_blank" rel="noopener" title="Facebook">
+                        <a  class="sidebar-button-link " href="https://facebook.com/kimtholstorf" target="_blank" rel="noopener" title="Facebook">
                     
                         <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Facebook</span>
@@ -178,7 +195,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="https://www.linkedin.com/in/kimtholstorf" target="_blank" rel="noopener" title="LinkedIn">
+                        <a  class="sidebar-button-link " href="https://www.linkedin.com/in/kimtholstorf" target="_blank" rel="noopener" title="LinkedIn">
                     
                         <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">LinkedIn</span>
@@ -187,7 +204,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a class="sidebar-button-link " href="mailto:kim@tholstorf.dk" target="_blank" rel="noopener" title="Mail">
+                        <a  class="sidebar-button-link " href="mailto:kim@tholstorf.dk" target="_blank" rel="noopener" title="Mail">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Mail</span>
@@ -216,9 +233,9 @@
     
     
         <div class="post-meta">
-    <time datetime="2018-12-18T11:53:19+01:00">
+    <time datetime="2019-12-21T11:53:19+01:00">
 	
-		    Dec 18, 2018
+		    Dec 21, 2019
     	
     </time>
     
@@ -230,18 +247,26 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.<br>Some will be about workrelated stuff but more likely it will be about my shift to focus on containers and Kubernetes - plus fun activities out and about with my family.</p>
-<p>Instead of using one of the more boring blog engines out on the internet (looking at you Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I opted for <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo.io</a> which is very much like <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyllrb</a> and <a href="https://https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, though something just felt more right for me with <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>.<br><a id="more"></a><br>Setting up github pages was a breeze and the same for setting up an <a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="noopener">apex domain</a> to point at my Github Page, i.e. just a <a href="https://github.com/KimTholstorf/darkcloud.github.io" target="_blank" rel="noopener">github repository</a>. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)<br>For comments i use <a href="disqus.com">Disqus</a> because integration was easy and because I could not get <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">Gitment</a> to work. The theme is based on Louis Barranqueiro’s very excellent <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="noopener">tranquilpeak theme</a>. <em>Seriously, look at his <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/DOCUMENTATION.md" target="_blank" rel="noopener">documentation</a></em>. I wish everyone was as thorough.</p>
+            <p>This is my personal blog and I will most of the time use this as a sort of parking space for thoughts and projects.<br>Some will be about workrelated stuff but more likely it will be about containers and Kubernetes - plus fun projects activities out and about.</p>
+<p>Instead of using one of the more boring blog engines out on the internet (looking at you Medium, Blogger and Wordpress) I opted for a Markdown based, static generated blog framework hosted on github pages. I ended up with <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo.io</a> which is very much like <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyllrb</a> and <a href="https://https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>, though something just felt more right for me with <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> - though I could end up use Hugo if they catch up with <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> features. I really like their approach, but <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> had more features that resonated with me.</p>
+<a id="more"></a>
+<p>Setting up github pages was a breeze and the same for setting up an <a href="https://help.github.com/articles/setting-up-an-apex-domain/" target="_blank" rel="noopener">apex domain</a> to point at my Github Page, i.e. just a <a href="https://github.com/KimTholstorf/darkcloud.github.io" target="_blank" rel="noopener">github repository</a>. I especially love that in github you can set the Custom Domain option in the web UI or just include a CNAME file in your first commit containing the URL to use (in my case transforming darkcloud.github.io to darkcloud.dk)<br>For comments i use <a href="disqus.com">Disqus</a> because integration was easy and because I could not get <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">Gitment</a> to work. The theme is based on Louis Barranqueiro’s very excellent <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak" target="_blank" rel="noopener">tranquilpeak theme</a>. <em>Seriously, look at his <a href="https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak/blob/master/DOCUMENTATION.md" target="_blank" rel="noopener">documentation</a></em>. I wish everyone was as thorough.</p>
 <p><strong>Install and configure Hexo</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo-generator-github --save</span><br><span class="line">$ hexo init myblog.github.io</span><br><span class="line">$ <span class="built_in">cd</span> myblog.github.io</span><br><span class="line">$ npm install</span><br><span class="line">$ git pull git@github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git themes/tranquilpeak</span><br><span class="line">$ vi _config.yml  <span class="comment">#edit _config.yml for settings</span></span><br><span class="line">$ vi themes/tranquilpeak/_config.yml  <span class="comment">#edit _config.yml for theme steeings</span></span><br><span class="line">$ vi themes/tranquilpeak/languages/en.yml <span class="comment">#edit author bio, etc.</span></span><br><span class="line">$ hexo server <span class="comment">#opens a local server on http://localhost4000 to see if hexo works</span></span><br></pre></td></tr></table></figure>
-<p><strong>Write posts</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span></span><br><span class="line">$ vi <span class="built_in">source</span>/_posts/hello-world.md <span class="comment">#write post content</span></span><br><span class="line">$ hexo generate <span class="comment">#generate and render static files</span></span><br><span class="line">$ hexo server <span class="comment">#opens a local server on http://localhost4000 to view changes</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Publish changes</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy <span class="comment">#configured in _config.yml to push files to github pages</span></span><br></pre></td></tr></table></figure></p>
+
+<p><strong>Write posts</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello World"</span></span><br><span class="line">$ vi <span class="built_in">source</span>/_posts/hello-world.md <span class="comment">#write post content</span></span><br><span class="line">$ hexo generate <span class="comment">#generate and render static files</span></span><br><span class="line">$ hexo server <span class="comment">#opens a local server on http://localhost4000 to view changes</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Publish changes</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy <span class="comment">#configured in _config.yml to push files to github pages</span></span><br></pre></td></tr></table></figure>
+
 <p>More info on <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">writing</a>, <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">generating</a> and <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">deployment</a> with Hexo.</p>
 <p><strong>Note to self:</strong><br>My plan is to keep the post syntax as close to Markdown as possible, though Hexo and the tranquilpeak theme does support some pretty cool custom tags for everything from fancybox galaries to alerts and highlighting.</p>
 <pre><code class="markdown">[<span class="string">![Sample Image Added via Markdown</span>](<span class="link">avatar.png</span>)](<span class="link">head.jpg</span>)
-[<span class="string">![Everything Is AWESOME</span>](<span class="link">https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg</span>)](<span class="link">https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME"</span>)
-</code></pre>
-<p>though the plugin tags are quite elegant<br><div class="figure fig-33 left" style="width:;"><img class="fig-img" src="avatar.png" alt=""></div> <div class="figure fig-33 center" style="width:;"><img class="fig-img" src="avatar_w.png" alt=""></div> <div class="figure fig-33 right" style="width:;"><img class="fig-img" src="avatar_g.png" alt=""></div><div style="clear:both;"></div></p>
+[<span class="string">![Everything Is AWESOME</span>](<span class="link">https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg</span>)](<span class="link">https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME"</span>)</code></pre>
+<p>though the plugin tags are quite elegant</p>
+<div class="figure fig-33 left" style="width:;"><img class="fig-img" src="avatar.png" alt></div> <div class="figure fig-33 center" style="width:;"><img class="fig-img" src="avatar_w.png" alt></div> <div class="figure fig-33 right" style="width:;"><img class="fig-img" src="avatar_g.png" alt></div><div style="clear:both;"></div>
+
 <div class="video-container"><iframe src="//www.youtube.com/embed/StTqXEQ2l-Y" frameborder="0" allowfullscreen></iframe></div>
             
 
@@ -250,7 +275,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br>
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/hexo/">hexo</a>
 
@@ -288,7 +313,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -296,7 +321,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -304,7 +329,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -344,7 +369,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2018 Kim Tholstorf. All Rights Reserved.
+        Copyrights &copy; 2020 Kim Tholstorf. All Rights Reserved.
     </span>
 </footer>
 
@@ -382,7 +407,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Facebook">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Facebook">
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
@@ -390,7 +415,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Twitter">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Twitter">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
@@ -398,7 +423,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/18/Hello-World/" title="Share on Google+">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2019/12/21/Hello-World/" title="Share on Google+">
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
@@ -432,7 +457,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2018/12/18/Hello-World/">
+                    <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=darkcloud.dk/2019/12/21/Hello-World/">
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
                     </a>
                 </li>
@@ -440,7 +465,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2018/12/18/Hello-World/">
+                    <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=darkcloud.dk/2019/12/21/Hello-World/">
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
                     </a>
                 </li>
@@ -448,7 +473,7 @@
                 
                 
                 <li class="share-option">
-                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2018/12/18/Hello-World/">
+                    <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=darkcloud.dk/2019/12/21/Hello-World/">
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
                     </a>
                 </li>
@@ -472,7 +497,7 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture">
+            <img id="about-card-picture" src="/assets/images/avatar_circle.png" alt="Author&#39;s picture"/>
         
             <h4 id="about-card-name">Kim Tholstorf</h4>
         
@@ -482,7 +507,7 @@
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
-                <br>
+                <br/>
                 <p>Senior Systems Engineer @ <a href="https://vmware.com">VMware</a></p>
 
             </div>
@@ -490,7 +515,7 @@
         
             <div id="about-card-location">
                 <i class="fa fa-map-marker-alt"></i>
-                <br>
+                <br/>
                 Denmark, Copenhagen
             </div>
         
@@ -507,9 +532,9 @@
     
         <script>
              var disqus_config = function () {
-                 this.page.url = 'darkcloud.dk/2018/12/18/Hello-World/';
+                 this.page.url = 'darkcloud.dk/2019/12/21/Hello-World/';
                  
-                    this.page.identifier = '2018/12/18/Hello-World/';
+                    this.page.identifier = '2019/12/21/Hello-World/';
                  
              };
             (function() {
